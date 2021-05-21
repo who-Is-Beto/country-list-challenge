@@ -1,4 +1,26 @@
 .card-country{
   width: 280px;
-  border: 1px solid red;
+  height: 320px;
+  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.137);
+}
+
+.country-image-container{
+  width: 100%;
+}
+
+.country-image{
+  width: 100%;
+}
+
+.data-country{
+  padding: 22px;
+}
+
+.country-title{
+  padding-bottom: 12px;
+  font-size: 18px;
+}
+
+.country-data-title{
+  font-weight: 600;
 }
