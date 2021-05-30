@@ -1,24 +1,21 @@
-:root{
---DarkBlueDarkModeElements: hsl(209, 23%, 22%);
---VeryDarkBlueDarkModeBackground: hsl(207, 26%, 17%);
---VeryDarkBlueLightModeText: hsl(200, 15%, 8%);
---DarkGrayLightModeInput: hsl(0, 0%, 52%);
---VeryLightGrayLightModeBackground: hsl(0, 0%, 98%);
---WhiteDarkModeTextLightModeElements: hsl(0, 0%, 100%);
+:root {
+  --Text: hsl(200, 15%, 8%);
+  --Background: hsl(0, 0%, 98%);
+  --shadowColor: rgba(0, 0, 0, 0.137);
 }
 
 * {
+  font-family: "Nunito Sans", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--WhiteDarkModeTextLightModeElements);
+  color: var(--Text);
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: var(--Background);
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

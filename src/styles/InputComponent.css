@@ -1,0 +1,29 @@
+.inputContainer {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+}
+.inputStuffContainer {
+  width: 90%;
+  padding: 0.5em;
+  box-shadow: -1px 1px 20px var(--shadowColor);
+  border-radius: 10px;
+}
+
+button {
+  width: 20%;
+  background: none;
+  border: none;
+}
+input {
+  border: none;
+  width: 80%;
+  outline: none;
+}
+::placeholder {
+  font-weight: 600;
+}

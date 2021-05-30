@@ -1,4 +1,31 @@
 header {
-  border: 1px solid red;
-  background-color: var(--DarkBlueDarkModeElements);
+  background-color: var(--Background);
+  display: flex;
+  justify-content: space-between;
+  padding: 22px;
+  box-shadow: -1px 1px 20px var(--shadowColor);
+  margin-bottom: 15px;
+  align-items: center;
+}
+.logo {
+  font-style: bold;
+  font-weight: 800;
+}
+.dark-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-style: bold;
+  font-weight: 600;
+  transition-duration: 0.6s;
+}
+.dark-switch:hover {
+  transform: scale(1.1);
+}
+.fa-moon {
+  color: var(--Text);
+}
+.far {
+  margin: 0.5em;
 }

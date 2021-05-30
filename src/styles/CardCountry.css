@@ -1,26 +1,33 @@
-.card-country{
+.card-country {
   width: 280px;
   height: 320px;
   box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.137);
+  margin-bottom: 22px;
+  border-radius: 8px;
 }
 
-.country-image-container{
+.country-image-container {
   width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
 }
 
-.country-image{
+.country-image {
+  height: 100%;
   width: 100%;
+
+  border-radius: 8px 8px 0 0;
 }
 
-.data-country{
+.data-country {
   padding: 22px;
 }
 
-.country-title{
+.country-title {
   padding-bottom: 12px;
   font-size: 18px;
 }
 
-.country-data-title{
+.country-data-title {
   font-weight: 600;
 }

@@ -1,21 +1,28 @@
 const actionTypes = {
-  FETCH_ALL_DATA: 'FETCH_ALL_DATA',
-  FETCH_DATA: 'FETCH_DATA',
-}
+  FETCH_ALL_DATA: "FETCH_ALL_DATA",
+  FETCH_DATA: "FETCH_DATA"
+};
 
 const initialState = {
   CountryList: [],
   country: {},
   isLoad: false,
   darkMode: true
-}
+};
 
 const storeReducer = (store, action) => {
   switch (action.type) {
-    default:
-      return store
-  }
-}
+    case actionTypes.FETCH_ALL_DATA:
+      console.log(action.payload);
+      return {
+        ...store,
+        CountryList: action.payload
+      };
 
-export { initialState, actionTypes }
-export default storeReducer
+    default:
+      return store;
+  }
+};
+
+export { initialState, actionTypes };
+export default storeReducer;
