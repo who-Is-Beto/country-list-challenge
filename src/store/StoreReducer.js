@@ -6,6 +6,7 @@ const actionTypes = {
 const initialState = {
   CountryList: [],
   country: {},
+  isLoad: false,
   darkMode: true
 }
 
