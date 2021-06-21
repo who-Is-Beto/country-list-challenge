@@ -1,5 +1,5 @@
-import React from "react";
-import "../styles/CardCountry.css";
+import React from "react"
+import "../styles/CardCountry.css"
 
 function CardCountry(props) {
   return (
@@ -15,13 +15,15 @@ function CardCountry(props) {
         </p>
         <p>
           <strong className="country-data-title">Region: </strong>
+          {props.region}
         </p>
         <p>
-          <strong className="country-data-title">Capital: </strong>df
+          <strong className="country-data-title">Capital: </strong>
+          {props.capital}
         </p>
       </div>
     </div>
-  );
+  )
 }
 
-export default CardCountry;
+export default CardCountry

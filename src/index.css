@@ -2,6 +2,8 @@
   --Text: hsl(200, 15%, 8%);
   --Background: hsl(0, 0%, 98%);
   --shadowColor: rgba(0, 0, 0, 0.137);
+  --Shadow: -1px 1px 20px var(--shadowColor);
+  --Radius: 8px;
 }
 
 * {

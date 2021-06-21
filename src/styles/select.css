@@ -1,0 +1,15 @@
+.select {
+  padding: 1rem;
+  border: none;
+  margin-bottom: 1rem;
+  width: 10rem;
+  background-color: var(--Background);
+  box-shadow: var(--Shadow);
+  color: var(--Text);
+  border-radius: var(--Radius);
+  outline: none;
+}
+.option {
+  top: 1rem;
+  position: relative;
+}
