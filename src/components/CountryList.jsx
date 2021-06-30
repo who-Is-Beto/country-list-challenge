@@ -5,6 +5,7 @@ import "../styles/CountryList.css"
 import { actionTypes } from "../store/StoreReducer"
 import { StoreContext } from "../store/StoreProvider"
 import Select from "./Select"
+import { Link } from "react-router-dom"
 
 function CountryList() {
   const [store, dispatch] = useContext(StoreContext)
@@ -23,7 +24,9 @@ function CountryList() {
     <div className="country-list-container">
       <Select />
       {store.CountryList.map((item) => (
-        <CardCountry key={item.name} {...item} />
+        <Link key={item.name} to={`/country/${item.alpha2Code.toLowerCase()}`}>
+          <CardCountry {...item} />
+        </Link>
       ))}
     </div>
   )

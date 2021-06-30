@@ -1,12 +1,8 @@
-import CountryList from "./components/CountryList";
-import Header from "./components/Header";
-import Input from "./components/Input";
+import AppRouter from "./router/AppRouter";
 function App() {
   return (
     <>
-      <Header />
-      <Input />
-      <CountryList />
+      <AppRouter />
     </>
   );
 }

@@ -21,3 +21,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a{
+  text-decoration: none;
+}
+
+.wrapper{
+  padding: 1rem;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.margin-bottom{
+  margin-bottom: 1rem;
+}

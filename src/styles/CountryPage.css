@@ -1,0 +1,28 @@
+.country-info-image-container{
+  width: 100%;
+}
+.country-info-image{
+  width: 100%;
+  border-radius: .5rem;
+}
+.back-button{
+  display: flex;
+  justify-content: center;
+  padding: 0.7rem 0.5rem;
+  box-shadow: var(--Shadow);
+  width: 100px;
+  border-radius: var(--Radius);
+}
+.info-container{
+  display: grid;
+  row-gap: 2rem;
+  height: 100%;
+}
+.sub-info p span::after {
+  content: ",";
+  position: relative;
+  right: 4px;
+}
+.sub-info p span:last-child::after {
+  content: ""
+}
