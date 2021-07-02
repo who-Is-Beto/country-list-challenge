@@ -3,7 +3,6 @@ import React, { useContext, useEffect, Suspense } from "react"
 import CardCountry from "./CardCountry"
 import { actionTypes } from "../store/StoreReducer"
 import { StoreContext } from "../store/StoreProvider"
-import Select from "./Select"
 import { Link } from "react-router-dom"
 import "../styles/CountryList.css"
 
@@ -33,9 +32,7 @@ function CountryList() {
 
   return (
     <Suspense fallback={<p>Loading...</p>}>
-
     <div className="country-list-container">
-      <Select />
       {list.map((item) => (
         <Link key={item.name} to={`/country/${item.alpha2Code.toLowerCase()}`}>
           <CardCountry {...item} />

@@ -8,7 +8,7 @@ const actionTypes = {
 const initialState = {
   CountryList: [],
   filteredList: [],
-  InoputValue: '',
+  regionList: [],
   country: {},
   isLoad: false,
   darkMode: true,
@@ -28,10 +28,11 @@ const storeReducer = (store, action) => {
         }
       case actionTypes.SEARCH_COUNTRY:
       let list
-      
-      list = store.CountryList.filter((country) => country.name.toLowerCase().includes(action.payload.toLowerCase()))
-
-        console.log('payload: ', action.payload, 'Filtered: ', store.filteredList, 'Filtro: ', list)
+        if(store.regionList.length > 0){
+          list = store.regionList.filter((country) => country.name.toLowerCase().includes(action.payload.toLowerCase()))
+        }else{
+          list = store.CountryList.filter((country) => country.name.toLowerCase().includes(action.payload.toLowerCase()))
+        }
         return {
           ...store,
           filteredList: list
@@ -39,7 +40,8 @@ const storeReducer = (store, action) => {
         case actionTypes.FILTER_COUNTRY:
           return {
             ...store,
-            InputValue: action.payload
+            regionList: action.payload,
+            filteredList: action.payload
           }
     default:
       return store

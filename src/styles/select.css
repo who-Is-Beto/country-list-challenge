@@ -1,7 +1,6 @@
 .select {
   padding: 1rem;
   border: none;
-  margin-bottom: 1rem;
   width: 10rem;
   background-color: var(--Background);
   box-shadow: var(--Shadow);

@@ -1,6 +1,8 @@
 .inputContainer {
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -9,6 +11,7 @@
 }
 .inputStuffContainer {
   width: 90%;
+  max-width: 400px;
   padding: 1em;
   box-shadow: var(--Shadow);
   border-radius: var(--Radius);
@@ -26,4 +29,11 @@ input {
 }
 ::placeholder {
   font-weight: 600;
+}
+
+@media screen and (min-width: 600px) {
+  .inputContainer{
+    justify-content: space-between;
+    padding: 0 3rem;
+  }
 }

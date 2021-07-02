@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { StoreContext } from "../store/StoreProvider";
 import { actionTypes } from "../store/StoreReducer";
 import "../styles/InputComponent.css";
+import Select from "./Select";
 function Input() {
   const [, dispatch] = useContext(StoreContext)
   const [inputValue, setInputValue] = useState('')
@@ -29,6 +30,7 @@ function Input() {
           value={inputValue}
         />
       </div>
+      <Select />
     </div>
   );
 }

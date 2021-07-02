@@ -2,4 +2,20 @@
   display: grid;
   width: 100%;
   justify-content: center;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 280px));
+}
+
+@media screen and (min-width: 600px) {
+  .country-list-container{
+    margin-top: 2rem;
+    column-gap: 4rem;
+  }
+
+  .country-list-container a {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

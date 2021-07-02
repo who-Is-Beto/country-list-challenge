@@ -1,9 +1,14 @@
 .card-country {
   width: 280px;
   height: 330px;
-  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.137);
+  box-shadow: var(--Shadow);
   margin-bottom: 22px;
   border-radius: 8px;
+  transition-duration: .5s;
+}
+
+.card-country:hover {
+  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.726);
 }
 
 .country-image-container {
