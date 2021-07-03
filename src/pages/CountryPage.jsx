@@ -24,20 +24,19 @@ const CountryPage = () => {
   return (
     <>
       <div className="wrapper">
-        <div className="info-container">
-        <Link to='/'>
           <div className="back-button">
+        <Link to='/'>
             <p><i className="fas fa-long-arrow-alt-left"></i> Back</p>
-          </div>
         </Link>
-
+          </div>
+        <div className="info-container">
           <div className="country-img">
             <div className="country-info-image-container">
               <img className="country-info-image" src={store.country.flag} alt={store.country.name} />
             </div>
           </div>
           <div className="contry-info">
-            <h3 className="margin-bottom">{store.country.name}</h3>
+            <h3 className="country-name">{store.country.name}</h3>
             <p className="margin-bottom">
               <strong className="country-data-title">Native Name: </strong>
               {store.country.nativeName}
@@ -76,16 +75,16 @@ const CountryPage = () => {
             </p>
           </div>
 
+        </div>
           <div className="country-info-border">
             <h3 className="margin-bottom">Border Countries:</h3>
             <div className="flex">
               {store.country.borders && store.country.borders.map((item) => 
-                <div className="back-button">
+                <div key={item} className="back-button">
                   <p>{item}</p>
               </div>)}
             </div>
           </div>
-        </div>
       </div>
     </>
   )

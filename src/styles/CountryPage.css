@@ -12,6 +12,7 @@
   box-shadow: var(--Shadow);
   width: 100px;
   border-radius: var(--Radius);
+  margin-bottom: 2rem;
 }
 .info-container{
   display: grid;
@@ -26,3 +27,24 @@
 .sub-info p span:last-child::after {
   content: ""
 }
+@media screen and (min-width: 600px){
+  .info-container{
+    grid-template-columns: 300px 120px 150px;
+    gap: 4rem;
+    justify-content: center;
+  }
+  .sub-info{
+    position: relative;
+    top: 3rem
+  }
+  .country-name{
+    position: absolute;
+    top: 11.5rem;
+  }
+  .contry-info{
+    display: grid;
+    align-items: center;
+    margin-top: 3rem
+  }
+}
+
