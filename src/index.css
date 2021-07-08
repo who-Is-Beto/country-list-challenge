@@ -41,3 +41,9 @@ a{
 .half-margin-bottom{
   margin-bottom: .5rem;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+  }
+}
