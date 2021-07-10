@@ -1,5 +1,6 @@
 .country-list-container{
   display: grid;
+  background-color: var(--PageBackgound);
   width: 100%;
   justify-content: center;
   gap: 2rem;

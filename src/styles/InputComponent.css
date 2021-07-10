@@ -10,7 +10,9 @@
   box-sizing: border-box;
 }
 .inputStuffContainer {
+  background-color: var(--Background);
   width: 90%;
+  transition-duration: var(--transition);
   max-width: 400px;
   padding: 1em;
   box-shadow: var(--Shadow);
@@ -24,6 +26,8 @@ button {
 }
 input {
   border: none;
+  transition-duration: var(--transition);
+  background-color: var(--Background);
   width: 80%;
   outline: none;
 }

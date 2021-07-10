@@ -5,10 +5,16 @@
   margin-bottom: 22px;
   border-radius: 8px;
   transition-duration: .5s;
+  background-color: var(--Background);
 }
 
 .card-country:hover {
-  box-shadow: -1px 1px 20px rgba(0, 0, 0, 0.726);
+  transform: scale(1.05) translateY(1rem);
+  box-shadow: -1px 1px 20px var(--ShadowHover);
+}
+
+.card-country:active {
+  transform: rotateZ(25deg);
 }
 
 .country-image-container {

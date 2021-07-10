@@ -1,10 +1,11 @@
 import React from 'react'
 import CountryList from "../components/CountryList";
 import Input from "../components/Input";
+import '../styles/Home.css'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="home">
       <Input />
       <CountryList />
     </div>

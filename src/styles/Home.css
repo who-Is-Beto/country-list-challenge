@@ -1,0 +1,6 @@
+.home {
+  transition-duration: var(--transition);
+  padding-top: 2rem;
+  background-color: var(--PageBackgound);
+  height: calc(100vh - var(--HeaderHeight))
+}

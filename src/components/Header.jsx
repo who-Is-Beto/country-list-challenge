@@ -11,10 +11,6 @@ function Header() {
     dispatch({
       type: actionTypes.CHANGE_DARK_MODE,
     })
-    console.log(store.darkMode)
-    if(store.darkMode){
-      
-    }
   }
 
   return (
@@ -25,7 +21,7 @@ function Header() {
         </div>
       </Link>
       <div className="dark-switch" onClick={handleChangeDarkMode}>
-        <i className="far fa-moon"></i>
+        <i className={ store.darkMode ? 'far fa-sun' : 'far fa-moon'}></i>
         <p>Dark mode</p>
       </div>
     </header>

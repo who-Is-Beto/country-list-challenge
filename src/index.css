@@ -4,6 +4,27 @@
   --shadowColor: rgba(0, 0, 0, 0.137);
   --Shadow: -1px 1px 20px var(--shadowColor);
   --Radius: 8px;
+  --HeaderHeight: 4rem;
+  --transition: .5s;
+}
+
+.is-dark-mode {
+  --Text: hsl(0, 0%, 100%);
+  --Background: hsl(209, 23%, 22%);
+  --PageBackgound: hsl(207, 26%, 17%);
+  --shadowColor: rgba(0, 0, 0, 0.137);
+  --ShadowHover: rgba(224, 224, 224, 0.445);
+  --Shadow: -1px 1px 20px var(--shadowColor);
+  --Radius: 8px;
+}
+
+.is-light-mode {
+  --Text: hsl(200, 15%, 8%);
+  --Background: hsl(0, 0%, 98%);
+  --shadowColor: rgba(0, 0, 0, 0.137);
+  --ShadowHover: rgba(0, 0, 0, 0.671);
+  --Shadow: -1px 1px 20px var(--shadowColor);
+  --Radius: 8px;
 }
 
 * {
@@ -27,7 +48,10 @@ a{
 }
 
 .wrapper{
+  transition-duration: var(--transition);
+  background-color: var(--PageBackgound);
   padding: 1rem;
+  height: calc(100vh - var(--HeaderHeight));
 }
 .flex{
   display: flex;
@@ -40,10 +64,4 @@ a{
 }
 .half-margin-bottom{
   margin-bottom: .5rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: black;
-  }
 }

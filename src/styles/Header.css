@@ -1,10 +1,12 @@
 header {
+  transition-duration: var(--transition);
   background-color: var(--Background);
   display: flex;
+  height: var(--HeaderHeight);
+  position: sticky;
   justify-content: space-between;
   padding: 22px;
   box-shadow: -1px 1px 20px var(--shadowColor);
-  margin-bottom: 15px;
   align-items: center;
 }
 .logo {
