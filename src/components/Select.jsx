@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { StoreContext } from "../store/StoreProvider"
 import { actionTypes } from "../store/StoreReducer"
 import "../styles/select.css"
@@ -6,13 +6,15 @@ import "../styles/select.css"
 const Select = () => {
 
   const [, dispatch] = useContext(StoreContext)
+  const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
+  const [filterActive, setFilterActive] = useState(false)
 
-  const handleSelect = (event) => {
+  const handleSelect = (region) => {
     let listRegion
-    if(event.target.value === ''){
+    if(region.toLowerCase() === ''){
       listRegion = 'https://restcountries.eu/rest/v2/all'
     }else{
-      listRegion = `https://restcountries.eu/rest/v2/region/${event.target.value}`
+      listRegion = `https://restcountries.eu/rest/v2/region/${region.toLowerCase()}`
     }
     fetch(listRegion)
       .then((respone) => respone.json())
@@ -24,27 +26,24 @@ const Select = () => {
       )
   }
 
+
   return (
-    <select onChange={handleSelect} className="select">
-      <option className="option" value="">
-        Filter By Region
-      </option>
-      <option className="option" value="africa">
-        Africa
-      </option>
-      <option className="option" value="americas">
-        Americas
-      </option>
-      <option className="option" value="asia">
-        Asia
-      </option>
-      <option className="option" value="europe">
-        Europe
-      </option>
-      <option className="option" value="oceania">
-        Oceania
-      </option>
-    </select>
+    <div className="select-region">
+      <p onClick={() => setFilterActive(!filterActive)} className='select-title'>Filter By Region <i className="fas fa-angle-down"></i></p>
+      {filterActive && 
+        <div className="options">
+          {regions.map((region) => (
+            <p
+            className='option half-margin-bottom'
+            key={region}
+            onClick={() => handleSelect(region)}
+            >
+              {region}
+            </p>
+          ))}
+        </div>
+      }
+    </div>
   )
 }
 

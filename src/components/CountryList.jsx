@@ -14,12 +14,17 @@ function CountryList() {
   useEffect(() => {
     fetch(API)
       .then((resone) => resone.json())
-      .then((data) =>
+      .then((data) => {
         dispatch({
           type: actionTypes.FETCH_ALL_DATA,
           payload: data,
         })
-      )
+        list = data
+      }
+        )
+        dispatch({
+          type: actionTypes.SET_LOAD
+        })
   }, [])
 
   let list
@@ -37,7 +42,8 @@ function CountryList() {
         <Link key={item.name} to={`/country/${item.alpha2Code.toLowerCase()}`}>
           <CardCountry {...item} />
         </Link>
-      ))}
+      ))
+      }
     </div>
       </Suspense>
   )

@@ -1,14 +1,41 @@
-.select {
-  padding: 1rem;
-  border: none;
+.select-title {
+  transition-duration: var(--transition);
   width: 10rem;
+  border-radius: var(--Radius);
   background-color: var(--Background);
   box-shadow: var(--Shadow);
-  color: var(--Text);
-  border-radius: var(--Radius);
-  outline: none;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.option {
-  top: 1rem;
-  position: relative;
+.select-title:hover{
+  box-shadow: -1px 1px 20px var(--ShadowHover);
+}
+.options{
+  position: absolute;
+  z-index: 1;
+  padding-top: .5rem;
+  top: 14.5rem;
+  background-color: var(--Background);
+  width: 10rem;
+  border-radius: var(--Radius);
+}
+.option{
+  padding-left: 1rem;
+  width: 100%;
+  cursor: pointer;
+  transition-duration: var(--transition);
+}
+.option:hover{
+  letter-spacing: 2px;
+}
+.option:active{
+  background-color: rgba(136, 136, 136, 0.562);
+}
+@media screen and (min-width: 672px){
+  .options{
+    top: 10rem;
+  }
 }

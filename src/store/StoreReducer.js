@@ -3,7 +3,8 @@ const actionTypes = {
   FETCH_COUNTRY_DATA: "FETCH_COUNTRY_DATA",
   FILTER_COUNTRY: 'FILTER_COUNTRY',
   SEARCH_COUNTRY: 'SEARCH_COUNTRY',
-  CHANGE_DARK_MODE: 'CHANGE_DARK_MODE'
+  CHANGE_DARK_MODE: 'CHANGE_DARK_MODE',
+  SET_LOAD: 'SET_LOAD',
 }
 
 const initialState = {
@@ -48,6 +49,11 @@ const storeReducer = (store, action) => {
           return {
             ...store,
             darkMode: !store.darkMode
+          }
+        case actionTypes.SET_LOAD:
+          return {
+            ...store,
+            isLoad: true,
           }
     default:
       return store

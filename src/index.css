@@ -51,7 +51,7 @@ a{
   transition-duration: var(--transition);
   background-color: var(--PageBackgound);
   padding: 1rem;
-  height: calc(100vh - var(--HeaderHeight));
+  min-height: calc(100vh - var(--HeaderHeight));
 }
 .flex{
   display: flex;

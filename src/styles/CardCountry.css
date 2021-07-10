@@ -9,12 +9,8 @@
 }
 
 .card-country:hover {
-  transform: scale(1.05) translateY(1rem);
+  transform: scale(1.05) translateY(1rem) rotateZ(3deg);
   box-shadow: -1px 1px 20px var(--ShadowHover);
-}
-
-.card-country:active {
-  transform: rotateZ(25deg);
 }
 
 .country-image-container {
@@ -26,7 +22,7 @@
 .country-image {
   height: 100%;
   width: 100%;
-
+  object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
 
