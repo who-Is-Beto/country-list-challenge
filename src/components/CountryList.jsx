@@ -20,7 +20,6 @@ function CountryList() {
           payload: data
         });
         list = data;
-        console.log(list);
       });
     dispatch({
       type: actionTypes.SET_LOAD

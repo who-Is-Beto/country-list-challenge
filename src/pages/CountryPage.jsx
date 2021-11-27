@@ -50,7 +50,7 @@ const CountryPage = () => {
                 <div className="country-info-text-left">
                   <p className="half-margin-bottom">
                     <strong>Native Name: </strong>
-                    {store.country[0].name.nativeName.spa.common}
+                    {Object.values(store.country[0].name.nativeName)[0].common}
                   </p>
                   <p className="half-margin-bottom">
                     <strong>Population: </strong>
